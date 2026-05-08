@@ -1,0 +1,101 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "almond",
+  "name": "Goleme",
+  "description": "Build and launch your website with AI — no coding required. Goleme turns your description into a live site in minutes.",
+  "colors": {
+    "primary": "#fbb50c",
+    "light": "#fcc63a",
+    "dark": "#e09f00"
+  },
+  "favicon": "https://media.brand.dev/e1cbccfe-34cd-4897-ac8f-805d336ef800.png",
+  "icons": {
+    "library": "lucide"
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs"
+  },
+  "contextual": {
+    "options": ["copy", "view", "assistant", "mcp", "add-mcp"]
+  },
+  "navigation": {
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Home",
+          "icon": "house",
+          "href": "/"
+        },
+        {
+          "anchor": "Goleme.ai",
+          "icon": "globe",
+          "href": "https://goleme.ai"
+        },
+        {
+          "anchor": "Help",
+          "icon": "life-buoy",
+          "href": "https://goleme.ai/contact"
+        }
+      ]
+    },
+    "directory": "card",
+    "groups": [
+      {
+        "group": "Get Started",
+        "icon": "rocket",
+        "expanded": true,
+        "pages": [
+          "introduction",
+          "quickstart",
+          "account-setup"
+        ]
+      },
+      {
+        "group": "Building Your Site",
+        "icon": "wand-sparkles",
+        "expanded": true,
+        "pages": [
+          "building/ai-chat",
+          "building/templates",
+          "building/pages-and-content",
+          "building/editing"
+        ]
+      },
+      {
+        "group": "Domains & Hosting",
+        "icon": "globe",
+        "expanded": true,
+        "pages": [
+          "domains/overview",
+          "domains/custom-domain",
+          "domains/publishing"
+        ]
+      },
+      {
+        "group": "Account & Billing",
+        "icon": "credit-card",
+        "expanded": true,
+        "pages": [
+          "billing/plans",
+          "billing/credits",
+          "billing/faq"
+        ]
+      }
+    ]
+  },
+  "logo": {
+    "light": "https://media.brand.dev/cb4c1c25-6c69-4303-9aa4-2fa75dd7a222.svg",
+    "dark": "https://media.brand.dev/cb4c1c25-6c69-4303-9aa4-2fa75dd7a222.svg"
+  },
+  "navbar": {
+    "links": [],
+    "primary": {
+      "type": "button",
+      "label": "Start for free",
+      "href": "https://goleme.ai"
+    }
+  },
+  "footer": {
+    "socials": {}
+  }
+}

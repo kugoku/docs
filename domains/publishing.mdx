@@ -1,0 +1,77 @@
+---
+title: "Make your Goleme site live by publishing it online"
+sidebarTitle: "Publishing"
+description: "Publishing makes your site accessible to visitors at its URL. Learn how to publish, preview first, and re-publish after making changes."
+---
+
+Publishing is the step that takes your site from a private draft to a live website that anyone can visit. Until you publish, your site exists only inside your Goleme project — no one else can see it. When you hit publish, Goleme deploys the current state of your site to its URL and makes it accessible on the web.
+
+<Tip>
+You can preview your site before publishing to check how it looks to visitors. Use the **Preview** button in your project to open a private preview link. The preview is not indexed by search engines and is not accessible to the public.
+</Tip>
+
+## What publishing does
+
+When you publish a project, Goleme:
+
+- Deploys the current version of your site to its URL
+- Issues an SSL certificate (if one is not already active), so your site loads over `https://`
+- Makes the site publicly accessible to anyone with the link
+
+Publishing does not lock your site. You can continue editing and re-publish at any time.
+
+## Publish to your Goleme subdomain
+
+Every project has a free subdomain at `yoursite.goleme.ai` that is ready to use immediately — no DNS setup required.
+
+<Steps>
+  <Step title="Open your project">
+    Go to your [Goleme dashboard](https://goleme.ai) and select the project you want to publish.
+  </Step>
+  <Step title="Preview your site (optional)">
+    Click **Preview** to open a private preview of your site. Check your pages, links, and layout before making the site public.
+  </Step>
+  <Step title="Click Publish">
+    Click the **Publish** button in the project toolbar. Goleme deploys your site and confirms when it is live.
+  </Step>
+  <Step title="Visit your site">
+    Your site is now live at `yoursite.goleme.ai`. Click the link shown in the dashboard to open it in your browser.
+  </Step>
+</Steps>
+
+## Publish to a custom domain
+
+If you have connected a custom domain to your project, you can publish directly to that domain. The steps are the same as above — Goleme automatically serves your site at the connected custom domain once you publish.
+
+<Note>
+You must connect a custom domain before you can publish to it. If you have not done that yet, see [Connect a custom domain](/domains/custom-domain) first. Custom domains are available on Business and Agency plans.
+</Note>
+
+## Re-publishing after edits
+
+Goleme does not publish changes automatically. Every time you update your site — whether you changed a heading, added a page, or adjusted the layout by chatting with Golem — you need to publish again to push those changes live.
+
+<Steps>
+  <Step title="Make your changes">
+    Chat with Golem to update your site. You can change text, colors, structure, or add new sections and pages.
+  </Step>
+  <Step title="Preview the changes (optional)">
+    Click **Preview** to review the updated site before it goes live.
+  </Step>
+  <Step title="Publish again">
+    Click **Publish**. Goleme deploys the new version of your site. Your previous version is immediately replaced by the updated one.
+  </Step>
+</Steps>
+
+Visitors to your site will see the latest published version as soon as deployment completes, which typically takes a few seconds.
+
+## What's next
+
+<CardGroup cols={2}>
+  <Card title="Connect a custom domain" icon="link" href="/domains/custom-domain">
+    Use your own domain instead of the default Goleme subdomain.
+  </Card>
+  <Card title="Edit your site" icon="pencil" href="/building/editing">
+    Keep improving your site by chatting with Golem after publishing.
+  </Card>
+</CardGroup>

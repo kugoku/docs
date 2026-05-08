@@ -1,0 +1,68 @@
+{
+  "projectType": "saas",
+  "projectName": "Goleme",
+  "projectDescription": "Goleme is an AI-powered website builder that lets anyone create, launch, and manage a website by simply describing what they want in plain language.",
+  "theme": "almond",
+  "primaryColor": "#fbb50c",
+  "lightColor": null,
+  "darkColor": null,
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Building Your Site",
+            "pages": [
+              "building/ai-chat",
+              "building/templates",
+              "building/pages-and-content",
+              "building/editing"
+            ]
+          },
+          {
+            "group": "Domains & Hosting",
+            "pages": [
+              "domains/overview",
+              "domains/custom-domain",
+              "domains/publishing"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "billing/plans",
+              "billing/credits",
+              "billing/faq"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "AI-powered website generation from plain-language descriptions",
+    "Starter templates for common website types (salon, blog, e-shop, craftsman)",
+    "Integrated hosting on goleme.ai subdomain",
+    "Custom domain connection and management",
+    "Chat-based editing — update any part of your site through conversation",
+    "Credit-based AI usage with top-up wallet",
+    "No coding or technical skills required"
+  ],
+  "publicApiSurface": [
+    "AI chat interface for site creation and editing",
+    "Template picker (Hair Salon, Travel Blog, E-Shop, Craftsman)",
+    "Project dashboard (manage up to 3–10 sites depending on plan)",
+    "Custom domain connection",
+    "Credit wallet and top-up",
+    "Account registration via email/password or Google OAuth"
+  ]
+}
