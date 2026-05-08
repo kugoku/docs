@@ -40,16 +40,35 @@ Before you start, make sure you have:
     Save the record. The exact steps vary by registrar — consult your registrar's help documentation if you are unsure where to find DNS settings.
   </Step>
   <Step title="Verify the connection">
-    Return to your Goleme project settings. Goleme will automatically check for your DNS record. Once the record is detected, the domain status changes to **Connected**.
+    Return to your Goleme project settings. Goleme checks your DNS record on a regular schedule and updates the **Link status** as it works through the connection.
   </Step>
   <Step title="Publish to your custom domain">
-    After the domain is connected, publish your project. Your site will be live at your custom domain. See [Publishing](/domains/publishing) for the full publish flow.
+    After the domain reaches **Active**, publish your project. Your site will be live at your custom domain. See [Publishing](/domains/publishing) for the full publish flow.
   </Step>
 </Steps>
 
 <Note>
 DNS changes can take anywhere from a few minutes to 48 hours to propagate across the internet, depending on your registrar and the TTL (time-to-live) setting on your records. If your domain does not appear connected immediately, wait a while and check again.
 </Note>
+
+## Link status
+
+After you add a custom domain, Goleme tracks its connection progress with a **Link status** that you can see in your project settings. The status updates automatically as Goleme verifies DNS and provisions an SSL certificate.
+
+| Status | What it means |
+|---|---|
+| **Linking** | Goleme is waiting for your DNS records to propagate and is preparing the SSL certificate. This is the normal state right after you add the domain. |
+| **Active** | DNS is resolving correctly and the SSL certificate is in place. Your domain is ready — you can publish to it. |
+| **Error** | The connection could not complete. Check the **Link failure reason** for details and follow the troubleshooting steps below. |
+
+Goleme rechecks linking domains every few minutes, so you do not need to refresh manually. If DNS has not propagated within **60 minutes** of adding the domain, the status moves to **Error** so you can correct the problem and try again.
+
+### Link failure reasons
+
+When the status is **Error**, Goleme shows one of these reasons:
+
+- **`dns_propagation_timeout`** — Your DNS records did not point to Goleme's server within 60 minutes. The most common cause is an incorrect record value, a missing record, or a very high TTL on a previous record. Re-check the values from step 3 against your registrar's DNS panel and re-add the domain.
+- **`cert_failed`** — DNS resolved correctly, but the SSL certificate could not be issued. This is usually a transient issue with the certificate authority. Re-add the domain to retry; if it keeps failing, [contact support](https://goleme.ai/contact).
 
 ## Register a .cz domain through Goleme
 
@@ -61,8 +80,12 @@ Domains registered through Goleme are registered by Kugoku s.r.o. on your behalf
 
 ## Troubleshooting
 
-**The domain status stays "Pending" for a long time.** DNS propagation can take up to 48 hours. Double-check that you entered the correct record type and value. A common mistake is creating a CNAME for a root domain — use an A record for root domains instead.
+**The domain status stays "Linking" for a long time.** Goleme waits up to 60 minutes for DNS to propagate before marking the domain as **Error** with reason `dns_propagation_timeout`. While the status is **Linking**, no action is needed — Goleme rechecks every few minutes. Double-check that you entered the correct record type and value. A common mistake is creating a CNAME for a root domain — use an A record for root domains instead.
 
-**I see a browser warning after connecting.** SSL certificates are provisioned automatically after the domain is verified. This usually takes a few minutes once DNS propagates.
+**My domain went to Error with `dns_propagation_timeout`.** Your DNS records were not pointing to Goleme within the 60-minute window. Re-check the record values in your registrar's DNS panel against the ones shown in your project settings, then re-add the domain in Goleme to start a new linking attempt.
+
+**My domain went to Error with `cert_failed`.** DNS resolved correctly, but the SSL certificate could not be issued. Re-add the domain to retry. If it keeps failing, [contact support](https://goleme.ai/contact).
+
+**I see a browser warning after connecting.** SSL certificates are provisioned automatically after the domain is verified. The status moves to **Active** once the certificate is in place — usually within a few minutes of DNS propagating.
 
 **I used up my custom domain allowance.** Each plan has a limit on the number of custom domains you can connect. Business plans allow 1 custom domain; Agency plans allow 5. Upgrade to a higher plan or contact Goleme to discuss a tailored plan if you need more.
