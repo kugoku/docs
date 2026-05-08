@@ -40,7 +40,7 @@ Než začnete, ujistěte se, že máte:
     Záznam uložte. Přesné kroky se liší podle registrátora. Pokud nevíte, kde DNS nastavení najít, podívejte se do nápovědy svého registrátora.
   </Step>
   <Step title="Ověřte připojení">
-    Vraťte se do nastavení projektu Goleme. Goleme automaticky zkontroluje DNS záznam. Jakmile ho detekuje, stav domény se změní na **Připojeno**.
+    Vraťte se do nastavení projektu Goleme. Goleme automaticky kontroluje DNS záznam každých pár minut. Stav domény se nejdřív zobrazí jako **Připojuji** (probíhá ověřování DNS a vystavení SSL certifikátu) a po úspěšném dokončení se změní na **Připojeno**. Pokud se DNS nepodaří ověřit do 60 minut od přidání domény, stav přejde na **Chyba** s důvodem **Vypršel časový limit pro propagaci DNS**.
   </Step>
   <Step title="Publikujte na vlastní doménu">
     Po připojení domény publikujte projekt. Web bude dostupný na vaší vlastní doméně. Celý postup publikování najdete v části [Publikování](/domains/publishing).
@@ -59,10 +59,20 @@ Předplatitelé tarifů Business a Agency dostávají **roční bonusový kredit
 
 Domény registrované přes Goleme registruje vaším jménem Kugoku s.r.o. Po dobu předplatného získáváte právo doménu používat.
 
+## Stavy domény
+
+Po přidání vlastní domény uvidíte v nastavení projektu jeden z těchto stavů:
+
+- **Připojuji** — Goleme čeká, až se DNS změny rozšíří, a poté vystaví SSL certifikát. Tento stav je normální v prvních minutách po úpravě DNS u registrátora.
+- **Připojeno** — DNS je ověřené, SSL certifikát je aktivní a doména obsluhuje váš web.
+- **Chyba** — připojení se nepodařilo dokončit. U tohoto stavu se zobrazí důvod:
+  - **Vypršel časový limit pro propagaci DNS** — DNS záznamy se nerozšířily do 60 minut. Zkontrolujte, že jsou A i CNAME záznamy správně nastavené, a doménu zkuste přidat znovu.
+  - **Nepodařilo se vystavit SSL certifikát** — DNS sice funguje, ale Goleme nemohlo získat SSL certifikát od Let's Encrypt. Obvykle pomůže počkat několik minut a zkusit doménu připojit znovu.
+
 ## Řešení potíží
 
-**Stav domény zůstává dlouho „Čeká na ověření“.** Propagace DNS může trvat až 48 hodin. Zkontrolujte, že jste zadali správný typ záznamu a hodnotu. Častou chybou je vytvoření CNAME pro kořenovou doménu. Pro kořenové domény použijte A záznam.
+**Stav domény zůstává dlouho „Připojuji“.** Propagace DNS může trvat až 48 hodin, ale Goleme čeká maximálně 60 minut. Pokud se v této době DNS nerozšíří, stav přejde na **Chyba**. Zkontrolujte, že jste zadali správný typ záznamu a hodnotu. Častou chybou je vytvoření CNAME pro kořenovou doménu. Pro kořenové domény použijte A záznam. Po opravě DNS doménu znovu připojte.
 
-**Po připojení vidím varování v prohlížeči.** SSL certifikáty se vystavují automaticky po ověření domény. Po propagaci DNS to obvykle trvá několik minut.
+**Po připojení vidím varování v prohlížeči.** SSL certifikáty se vystavují automaticky po ověření DNS. Pokud doména právě přešla do stavu **Připojeno**, krátce počkejte a stránku načtěte znovu.
 
 **Vyčerpal jsem limit vlastních domén.** Každý tarif má limit počtu vlastních domén, které můžete připojit. Tarif Business umožňuje 1 vlastní doménu, tarif Agency 5. Pokud potřebujete víc, přejděte na vyšší tarif nebo kontaktujte Goleme kvůli individuálnímu tarifu.
