@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "almond",
   "name": "Goleme",
-  "description": "Build and launch your website with AI — no coding required. Goleme turns your description into a live site in minutes.",
+  "description": "Vytvořte a spusťte svůj web pomocí AI bez programování. Goleme promění váš popis v živý web během několika minut.",
   "colors": {
     "primary": "#fbb50c",
     "light": "#fcc63a",
@@ -22,7 +22,7 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Home",
+          "anchor": "Domů",
           "icon": "house",
           "href": "/"
         },
@@ -32,7 +32,7 @@
           "href": "https://goleme.ai"
         },
         {
-          "anchor": "Help",
+          "anchor": "Nápověda",
           "icon": "life-buoy",
           "href": "https://goleme.ai/contact"
         }
@@ -45,7 +45,7 @@
         "default": true,
         "groups": [
           {
-            "group": "Get Started",
+            "group": "Začínáme",
             "icon": "rocket",
             "expanded": true,
             "pages": [
@@ -55,7 +55,7 @@
             ]
           },
           {
-            "group": "Building Your Site",
+            "group": "Tvorba webu",
             "icon": "wand-sparkles",
             "expanded": true,
             "pages": [
@@ -66,7 +66,7 @@
             ]
           },
           {
-            "group": "Domains & Hosting",
+            "group": "Domény a hosting",
             "icon": "globe",
             "expanded": true,
             "pages": [
@@ -76,7 +76,7 @@
             ]
           },
           {
-            "group": "Account & Billing",
+            "group": "Účet a fakturace",
             "icon": "credit-card",
             "expanded": true,
             "pages": [
@@ -97,7 +97,7 @@
     "links": [],
     "primary": {
       "type": "button",
-      "label": "Start for free",
+      "label": "Začít zdarma",
       "href": "https://goleme.ai"
     }
   },

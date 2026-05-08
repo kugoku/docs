@@ -1,68 +1,68 @@
 ---
-title: "How to connect a custom domain to your Goleme site"
-sidebarTitle: "Custom Domain"
-description: "Use a domain you already own with your Goleme project. Update your DNS records to point it to Goleme. Requires a Business or Agency plan."
+title: "Jak připojit vlastní doménu k webu Goleme"
+sidebarTitle: "Vlastní doména"
+description: "Použijte doménu, kterou už vlastníte, se svým projektem Goleme. Upravte DNS záznamy tak, aby směřovaly na Goleme. Vyžaduje tarif Business nebo Agency."
 ---
 
-If you own a domain name — whether you registered it with a Czech registrar, GoDaddy, Namecheap, or anywhere else — you can connect it to any Goleme project. Once connected, visitors who go to your domain will see your Goleme site. The connection works by updating a DNS record at your domain registrar to point traffic to Goleme's servers.
+Pokud vlastníte doménu — ať je registrovaná u českého registrátora, GoDaddy, Namecheap nebo kdekoli jinde — můžete ji připojit k libovolnému projektu Goleme. Po připojení návštěvníci na vaší doméně uvidí web Goleme. Připojení funguje tak, že u registrátora domény upravíte DNS záznam, který nasměruje provoz na servery Goleme.
 
 <Warning>
-Connecting a custom domain requires a **Business** or **Agency** plan. The free Explorer plan only supports the automatically assigned `yoursite.goleme.ai` subdomain. [Compare plans](https://goleme.ai/pricing) to upgrade.
+Připojení vlastní domény vyžaduje tarif **Business** nebo **Agency**. Bezplatný tarif Explorer podporuje pouze automaticky přiřazenou subdoménu `yoursite.goleme.ai`. Pokud chcete přejít na vyšší tarif, [porovnejte tarify](https://goleme.ai/pricing).
 </Warning>
 
-## Requirements
+## Požadavky
 
-Before you start, make sure you have:
+Než začnete, ujistěte se, že máte:
 
-- A **Business** or **Agency** Goleme plan
-- A domain name you own, registered with any domain registrar
-- Access to the DNS settings for that domain (usually in your registrar's control panel)
-- A published Goleme project to connect the domain to
+- Tarif Goleme **Business** nebo **Agency**
+- Doménu, kterou vlastníte a která je registrovaná u libovolného registrátora
+- Přístup k nastavení DNS této domény, obvykle v administraci registrátora
+- Publikovaný projekt Goleme, ke kterému chcete doménu připojit
 
-## Connect your domain
+## Připojte doménu
 
 <Steps>
-  <Step title="Open your project settings">
-    Go to your [Goleme dashboard](https://goleme.ai) and open the project you want to connect a domain to. Navigate to the **Settings** tab within the project.
+  <Step title="Otevřete nastavení projektu">
+    Přejděte na [nástěnku Goleme](https://goleme.ai) a otevřete projekt, ke kterému chcete připojit doménu. V projektu přejděte na kartu **Nastavení**.
   </Step>
-  <Step title="Add your domain">
-    Find the **Custom domain** section and enter the domain name you want to use — for example, `www.yourbusiness.cz` or `yourbusiness.cz`. Click **Add domain** to continue.
+  <Step title="Přidejte doménu">
+    Najděte sekci **Vlastní doména** a zadejte doménu, kterou chcete použít, například `www.yourbusiness.cz` nebo `yourbusiness.cz`. Pokračujte kliknutím na **Přidat doménu**.
   </Step>
-  <Step title="Copy the DNS values">
-    Goleme will display the DNS record you need to create. Copy the record type, name, and value shown on screen. You will enter these into your registrar's DNS settings in the next step.
+  <Step title="Zkopírujte hodnoty DNS">
+    Goleme zobrazí DNS záznam, který musíte vytvořit. Zkopírujte typ záznamu, název a hodnotu zobrazenou na obrazovce. V dalším kroku je zadáte do DNS nastavení u registrátora.
   </Step>
-  <Step title="Update your DNS records">
-    Log in to the control panel of the registrar where your domain is registered. Open the DNS settings for your domain and create a new record using the values from the previous step:
+  <Step title="Upravte DNS záznamy">
+    Přihlaste se do administrace registrátora, u kterého je doména registrovaná. Otevřete DNS nastavení domény a vytvořte nový záznam podle hodnot z předchozího kroku:
 
-    - For a **root domain** (e.g., `yourbusiness.cz`): create an **A record** pointing to the Goleme IP address shown.
-    - For a **subdomain** (e.g., `www.yourbusiness.cz`): create a **CNAME record** pointing to the Goleme hostname shown.
+    - Pro **kořenovou doménu**, například `yourbusiness.cz`, vytvořte **A záznam** směřující na zobrazenou IP adresu Goleme.
+    - Pro **subdoménu**, například `www.yourbusiness.cz`, vytvořte **CNAME záznam** směřující na zobrazený hostname Goleme.
 
-    Save the record. The exact steps vary by registrar — consult your registrar's help documentation if you are unsure where to find DNS settings.
+    Záznam uložte. Přesné kroky se liší podle registrátora. Pokud nevíte, kde DNS nastavení najít, podívejte se do nápovědy svého registrátora.
   </Step>
-  <Step title="Verify the connection">
-    Return to your Goleme project settings. Goleme will automatically check for your DNS record. Once the record is detected, the domain status changes to **Connected**.
+  <Step title="Ověřte připojení">
+    Vraťte se do nastavení projektu Goleme. Goleme automaticky zkontroluje DNS záznam. Jakmile ho detekuje, stav domény se změní na **Připojeno**.
   </Step>
-  <Step title="Publish to your custom domain">
-    After the domain is connected, publish your project. Your site will be live at your custom domain. See [Publishing](/domains/publishing) for the full publish flow.
+  <Step title="Publikujte na vlastní doménu">
+    Po připojení domény publikujte projekt. Web bude dostupný na vaší vlastní doméně. Celý postup publikování najdete v části [Publikování](/domains/publishing).
   </Step>
 </Steps>
 
 <Note>
-DNS changes can take anywhere from a few minutes to 48 hours to propagate across the internet, depending on your registrar and the TTL (time-to-live) setting on your records. If your domain does not appear connected immediately, wait a while and check again.
+Propagace DNS změn po internetu může podle registrátora a nastavení TTL (time-to-live) trvat několik minut až 48 hodin. Pokud se doména nepřipojí okamžitě, chvíli počkejte a zkontrolujte ji znovu.
 </Note>
 
-## Register a .cz domain through Goleme
+## Registrace domény .cz přes Goleme
 
-If you do not yet have a domain, you can register a `.cz` domain directly through the Goleme platform without leaving your dashboard.
+Pokud ještě doménu nemáte, můžete si doménu `.cz` zaregistrovat přímo přes platformu Goleme bez opuštění nástěnky.
 
-Business and Agency plan subscribers receive a **yearly bonus credit** that covers the registration or renewal of one `.cz` domain for one year — applied automatically after each successful annual payment. This makes it straightforward to get a Czech domain and connect it to your project in one place.
+Předplatitelé tarifů Business a Agency dostávají **roční bonusový kredit**, který pokryje registraci nebo prodloužení jedné domény `.cz` na jeden rok. Kredit se automaticky uplatní po každé úspěšné roční platbě. Získání české domény a její připojení k projektu tak vyřídíte na jednom místě.
 
-Domains registered through Goleme are registered by Kugoku s.r.o. on your behalf. You receive usage rights for the domain for the duration of your subscription.
+Domény registrované přes Goleme registruje vaším jménem Kugoku s.r.o. Po dobu předplatného získáváte právo doménu používat.
 
-## Troubleshooting
+## Řešení potíží
 
-**The domain status stays "Pending" for a long time.** DNS propagation can take up to 48 hours. Double-check that you entered the correct record type and value. A common mistake is creating a CNAME for a root domain — use an A record for root domains instead.
+**Stav domény zůstává dlouho „Čeká na ověření“.** Propagace DNS může trvat až 48 hodin. Zkontrolujte, že jste zadali správný typ záznamu a hodnotu. Častou chybou je vytvoření CNAME pro kořenovou doménu. Pro kořenové domény použijte A záznam.
 
-**I see a browser warning after connecting.** SSL certificates are provisioned automatically after the domain is verified. This usually takes a few minutes once DNS propagates.
+**Po připojení vidím varování v prohlížeči.** SSL certifikáty se vystavují automaticky po ověření domény. Po propagaci DNS to obvykle trvá několik minut.
 
-**I used up my custom domain allowance.** Each plan has a limit on the number of custom domains you can connect. Business plans allow 1 custom domain; Agency plans allow 5. Upgrade to a higher plan or contact Goleme to discuss a tailored plan if you need more.
+**Vyčerpal jsem limit vlastních domén.** Každý tarif má limit počtu vlastních domén, které můžete připojit. Tarif Business umožňuje 1 vlastní doménu, tarif Agency 5. Pokud potřebujete víc, přejděte na vyšší tarif nebo kontaktujte Goleme kvůli individuálnímu tarifu.
