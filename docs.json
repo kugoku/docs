@@ -90,8 +90,8 @@
     ]
   },
   "logo": {
-    "light": "https://media.brand.dev/cb4c1c25-6c69-4303-9aa4-2fa75dd7a222.svg",
-    "dark": "https://media.brand.dev/cb4c1c25-6c69-4303-9aa4-2fa75dd7a222.svg"
+    "light": "/logo/dark.svg",
+    "dark": "/logo/light.svg"
   },
   "navbar": {
     "links": [],
