@@ -39,46 +39,52 @@
       ]
     },
     "directory": "card",
-    "groups": [
+    "languages": [
       {
-        "group": "Get Started",
-        "icon": "rocket",
-        "expanded": true,
-        "pages": [
-          "introduction",
-          "quickstart",
-          "account-setup"
-        ]
-      },
-      {
-        "group": "Building Your Site",
-        "icon": "wand-sparkles",
-        "expanded": true,
-        "pages": [
-          "building/ai-chat",
-          "building/templates",
-          "building/pages-and-content",
-          "building/editing"
-        ]
-      },
-      {
-        "group": "Domains & Hosting",
-        "icon": "globe",
-        "expanded": true,
-        "pages": [
-          "domains/overview",
-          "domains/custom-domain",
-          "domains/publishing"
-        ]
-      },
-      {
-        "group": "Account & Billing",
-        "icon": "credit-card",
-        "expanded": true,
-        "pages": [
-          "billing/plans",
-          "billing/credits",
-          "billing/faq"
+        "language": "cs",
+        "default": true,
+        "groups": [
+          {
+            "group": "Get Started",
+            "icon": "rocket",
+            "expanded": true,
+            "pages": [
+              "introduction",
+              "quickstart",
+              "account-setup"
+            ]
+          },
+          {
+            "group": "Building Your Site",
+            "icon": "wand-sparkles",
+            "expanded": true,
+            "pages": [
+              "building/ai-chat",
+              "building/templates",
+              "building/pages-and-content",
+              "building/editing"
+            ]
+          },
+          {
+            "group": "Domains & Hosting",
+            "icon": "globe",
+            "expanded": true,
+            "pages": [
+              "domains/overview",
+              "domains/custom-domain",
+              "domains/publishing"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "icon": "credit-card",
+            "expanded": true,
+            "pages": [
+              "billing/plans",
+              "billing/credits",
+              "billing/faq"
+            ]
+          }
         ]
       }
     ]
