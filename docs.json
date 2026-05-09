@@ -24,7 +24,7 @@
         {
           "anchor": "Domů",
           "icon": "house",
-          "href": "/"
+          "href": "/docs"
         },
         {
           "anchor": "Goleme.ai",
@@ -32,7 +32,7 @@
           "href": "https://goleme.ai"
         },
         {
-          "anchor": "Nápověda",
+          "anchor": "Kontaktujte nás",
           "icon": "life-buoy",
           "href": "https://goleme.ai/contact"
         }
