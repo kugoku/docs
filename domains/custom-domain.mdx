@@ -1,20 +1,20 @@
 ---
 title: "Jak připojit vlastní doménu k webu Goleme"
 sidebarTitle: "Vlastní doména"
-description: "Použijte doménu, kterou už vlastníte, se svým projektem Goleme. Upravte DNS záznamy tak, aby směřovaly na Goleme. Vyžaduje tarif Business nebo Agency."
+description: "Použijte doménu, kterou už vlastníte, se svým projektem Goleme. Upravte DNS záznamy tak, aby směřovaly na Goleme. Vyžaduje tarif Podnikatel nebo vyšší."
 ---
 
-Pokud vlastníte doménu — ať je registrovaná u českého registrátora, GoDaddy, Namecheap nebo kdekoli jinde — můžete ji připojit k libovolnému projektu Goleme. Po připojení návštěvníci na vaší doméně uvidí web Goleme. Připojení funguje tak, že u registrátora domény upravíte DNS záznam, který nasměruje provoz na servery Goleme.
+Pokud vlastníte doménu, ať je registrovaná u českého registrátora, GoDaddy, Namecheap nebo kdekoli jinde, můžete ji připojit k projektu Goleme. Po připojení návštěvníci na vaší doméně uvidí web Goleme. Připojení funguje tak, že v Goleme přidáte doménu a u registrátora upravíte DNS záznamy podle pokynů na obrazovce.
 
 <Warning>
-Připojení vlastní domény vyžaduje tarif **Business** nebo **Agency**. Bezplatný tarif Explorer podporuje pouze automaticky přiřazenou subdoménu `yoursite.goleme.ai`. Pokud chcete přejít na vyšší tarif, [porovnejte tarify](https://goleme.ai/pricing).
+Připojení vlastní domény vyžaduje tarif **Podnikatel**, **Agentura** nebo **Na míru**. Bezplatný tarif Zkouška podporuje pouze subdoménu `vas-projekt.goleme.ai`. Pokud chcete přejít na vyšší tarif, [porovnejte tarify](https://goleme.ai/cenik).
 </Warning>
 
 ## Požadavky
 
 Než začnete, ujistěte se, že máte:
 
-- Tarif Goleme **Business** nebo **Agency**
+- Tarif Goleme **Podnikatel**, **Agentura** nebo **Na míru**
 - Doménu, kterou vlastníte a která je registrovaná u libovolného registrátora
 - Přístup k nastavení DNS této domény, obvykle v administraci registrátora
 - Publikovaný projekt Goleme, ke kterému chcete doménu připojit
@@ -22,47 +22,47 @@ Než začnete, ujistěte se, že máte:
 ## Připojte doménu
 
 <Steps>
-  <Step title="Otevřete nastavení projektu">
-    Přejděte na [nástěnku Goleme](https://goleme.ai) a otevřete projekt, ke kterému chcete připojit doménu. V projektu přejděte na kartu **Nastavení**.
+  <Step title="Otevřete Domény">
+    Přihlaste se ke svému účtu Goleme a přejděte do části [**Domény**](https://goleme.ai/domeny).
   </Step>
   <Step title="Přidejte doménu">
-    Najděte sekci **Vlastní doména** a zadejte doménu, kterou chcete použít, například `www.yourbusiness.cz` nebo `yourbusiness.cz`. Pokračujte kliknutím na **Přidat doménu**.
+    V části **Připojit vlastní doménu zdarma** zadejte doménu, kterou už vlastníte, například `www.yourbusiness.cz` nebo `yourbusiness.cz`. Pokračujte kliknutím na **Přidat doménu**.
   </Step>
-  <Step title="Zkopírujte hodnoty DNS">
-    Goleme zobrazí DNS záznam, který musíte vytvořit. Zkopírujte typ záznamu, název a hodnotu zobrazenou na obrazovce. V dalším kroku je zadáte do DNS nastavení u registrátora.
+  <Step title="Vyberte projekt">
+    V seznamu **Moje domény** klikněte u nové domény na **Propojit s projektem** a vyberte projekt, ke kterému doména patří.
   </Step>
   <Step title="Upravte DNS záznamy">
-    Přihlaste se do administrace registrátora, u kterého je doména registrovaná. Otevřete DNS nastavení domény a vytvořte nový záznam podle hodnot z předchozího kroku:
+    Goleme zobrazí DNS záznamy, které musíte nastavit u registrátora. Přihlaste se do administrace registrátora, otevřete DNS nastavení domény a vytvořte záznamy podle hodnot z Goleme:
 
-    - Pro **kořenovou doménu**, například `yourbusiness.cz`, vytvořte **A záznam** směřující na zobrazenou IP adresu Goleme.
-    - Pro **subdoménu**, například `www.yourbusiness.cz`, vytvořte **CNAME záznam** směřující na zobrazený hostname Goleme.
+    - Pro **kořenovou doménu**, například `vase-stranka.cz`, vytvořte **A záznam** pro `@` a **A záznam** pro `www`. Oba směřují na zobrazenou IP adresu Goleme.
+    - Pro **subdoménu**, například `blog.vase-stranka.cz`, vytvořte **CNAME záznam** směřující na zobrazenou doménu Goleme.
 
-    Záznam uložte. Přesné kroky se liší podle registrátora. Pokud nevíte, kde DNS nastavení najít, podívejte se do nápovědy svého registrátora.
+    Záznamy uložte. Přesné kroky se liší podle registrátora. Pokud nevíte, kde DNS nastavení najít, podívejte se do nápovědy svého registrátora.
   </Step>
-  <Step title="Ověřte připojení">
-    Vraťte se do nastavení projektu Goleme. Goleme automaticky zkontroluje DNS záznam. Jakmile ho detekuje, stav domény se změní na **Připojeno**.
+  <Step title="Potvrďte DNS v Goleme">
+    V Goleme zaškrtněte, že jste DNS záznamy nastavili, a klikněte na **Propojit**. Doména přejde do stavu nastavování SSL. To může trvat několik minut, někdy až přibližně hodinu.
   </Step>
   <Step title="Publikujte na vlastní doménu">
-    Po připojení domény publikujte projekt. Web bude dostupný na vaší vlastní doméně. Celý postup publikování najdete v části [Publikování](/domains/publishing).
+    Po úspěšném propojení domény publikujte projekt. Web bude dostupný na vaší vlastní doméně. Celý postup publikování najdete v části [Publikování](/domains/publishing).
   </Step>
 </Steps>
 
 <Note>
-Propagace DNS změn po internetu může podle registrátora a nastavení TTL (time-to-live) trvat několik minut až 48 hodin. Pokud se doména nepřipojí okamžitě, chvíli počkejte a zkontrolujte ji znovu.
+Propagace DNS změn po internetu může podle registrátora a nastavení TTL (time-to-live) trvat několik minut až 48 hodin. Pokud se doména nepřipojí okamžitě, chvíli počkejte a zkontrolujte ji znovu. Pokud Goleme po přibližně jedné hodině zobrazí chybu, počkejte ještě několik hodin a zkuste propojení spustit znovu.
 </Note>
 
-## Registrace domény .cz přes Goleme
+## Registrace nové domény přes Goleme
 
-Pokud ještě doménu nemáte, můžete si doménu `.cz` zaregistrovat přímo přes platformu Goleme bez opuštění nástěnky.
+Pokud ještě doménu nemáte, můžete si podporovanou doménu zaregistrovat přímo přes platformu Goleme bez opuštění nástěnky. V části **Domény** použijte **Získat novou doménu**, ověřte dostupnost a zaplaťte registraci kredity z peněženky.
 
-Předplatitelé tarifů Business a Agency dostávají **roční bonusový kredit**, který pokryje registraci nebo prodloužení jedné domény `.cz` na jeden rok. Kredit se automaticky uplatní po každé úspěšné roční platbě. Získání české domény a její připojení k projektu tak vyřídíte na jednom místě.
+Předplatitelé tarifů Podnikatel a Agentura dostávají **roční bonusový kredit** na doménové služby. Bonus odpovídá aktuální ceně registrace nebo obnovy jedné domény `.cz` na jeden rok a připíše se po každé úspěšné roční platbě.
 
-Domény registrované přes Goleme registruje vaším jménem Kugoku s.r.o. Po dobu předplatného získáváte právo doménu používat.
+Domény registrované přes Goleme registruje vaším jménem Kugoku s.r.o. Po dobu aktivní doménové služby získáváte právo doménu používat.
 
 ## Řešení potíží
 
-**Stav domény zůstává dlouho „Čeká na ověření“.** Propagace DNS může trvat až 48 hodin. Zkontrolujte, že jste zadali správný typ záznamu a hodnotu. Častou chybou je vytvoření CNAME pro kořenovou doménu. Pro kořenové domény použijte A záznam.
+**Stav domény zůstává dlouho v nastavování.** Propagace DNS může trvat až 48 hodin. Zkontrolujte, že jste zadali správný typ záznamu a hodnotu. Častou chybou je vytvoření CNAME pro kořenovou doménu. Pro kořenové domény použijte A záznamy.
 
 **Po připojení vidím varování v prohlížeči.** SSL certifikáty se vystavují automaticky po ověření domény. Po propagaci DNS to obvykle trvá několik minut.
 
-**Vyčerpal jsem limit vlastních domén.** Každý tarif má limit počtu vlastních domén, které můžete připojit. Tarif Business umožňuje 1 vlastní doménu, tarif Agency 5. Pokud potřebujete víc, přejděte na vyšší tarif nebo kontaktujte Goleme kvůli individuálnímu tarifu.
+**Vyčerpal jsem limit domén.** Každý tarif má limit počtu doménových služeb. Tarif Podnikatel umožňuje 1 doménu, tarif Agentura 5. Pokud potřebujete víc, přejděte na vyšší tarif nebo kontaktujte Goleme kvůli individuálnímu tarifu.

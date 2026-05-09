@@ -7,7 +7,7 @@ description: "Publikováním zpřístupníte web návštěvníkům na jeho URL. 
 Publikování je krok, který změní soukromý koncept na živý web dostupný komukoli. Dokud web nepublikujete, existuje jen uvnitř vašeho projektu Goleme a nikdo jiný ho nevidí. Po kliknutí na publikování Goleme nasadí aktuální verzi webu na jeho URL a zpřístupní ji na internetu.
 
 <Tip>
-Před publikováním si web můžete prohlédnout, abyste viděli, jak bude působit na návštěvníky. Tlačítkem **Náhled** v projektu otevřete soukromý odkaz na náhled. Náhled není indexovaný vyhledávači a není veřejně dostupný.
+Před publikováním si web můžete prohlédnout v náhledu projektu. Náhled slouží vám při tvorbě. Veřejně dostupný web vznikne až po publikování.
 </Tip>
 
 ## Co publikování dělá
@@ -15,14 +15,14 @@ Před publikováním si web můžete prohlédnout, abyste viděli, jak bude půs
 Když publikujete projekt, Goleme:
 
 - Nasadí aktuální verzi webu na jeho URL
-- Vystaví SSL certifikát, pokud ještě není aktivní, aby se web načítal přes `https://`
+- Připraví HTTPS přes SSL certifikát, pokud ještě není aktivní
 - Zpřístupní web veřejně každému, kdo má odkaz
 
 Publikováním web nezamknete. Můžete ho dál upravovat a kdykoli znovu publikovat.
 
 ## Publikování na subdoménu Goleme
 
-Každý projekt má bezplatnou subdoménu `yoursite.goleme.ai`, kterou můžete použít okamžitě bez nastavování DNS.
+Každý projekt má bezplatnou subdoménu `vas-projekt.goleme.ai`, kterou můžete použít okamžitě bez nastavování DNS.
 
 <Steps>
   <Step title="Otevřete projekt">
@@ -35,21 +35,21 @@ Každý projekt má bezplatnou subdoménu `yoursite.goleme.ai`, kterou můžete 
     Klikněte na tlačítko **Publikovat** v panelu projektu. Goleme web nasadí a potvrdí, až bude živý.
   </Step>
   <Step title="Otevřete web">
-    Web je nyní živý na `yoursite.goleme.ai`. Klikněte na odkaz zobrazený v nástěnce a otevřete ho v prohlížeči.
+    Web je nyní živý na `vas-projekt.goleme.ai`. Odkaz najdete v projektu nebo na kartě projektu v nástěnce.
   </Step>
 </Steps>
 
 ## Publikování na vlastní doménu
 
-Pokud jste k projektu připojili vlastní doménu, můžete publikovat přímo na ni. Kroky jsou stejné jako výše. Po publikování Goleme automaticky zobrazí web na připojené vlastní doméně.
+Pokud jste k projektu připojili vlastní doménu, můžete publikovat přímo na ni. Kroky jsou stejné jako výše. Po publikování Goleme zobrazí web na subdoméně Goleme i na připojené vlastní doméně.
 
 <Note>
-Před publikováním na vlastní doménu ji musíte nejdřív připojit. Pokud jste to ještě neudělali, začněte částí [Připojit vlastní doménu](/domains/custom-domain). Vlastní domény jsou dostupné v tarifech Business a Agency.
+Před publikováním na vlastní doménu ji musíte nejdřív přidat v části **Domény** a propojit s projektem. Pokud jste to ještě neudělali, začněte částí [Připojit vlastní doménu](/domains/custom-domain). Vlastní domény jsou dostupné v tarifech Podnikatel, Agentura a Na míru.
 </Note>
 
 ## Opětovné publikování po úpravách
 
-Goleme změny nepublikuje automaticky. Pokaždé, když web upravíte — ať změníte nadpis, přidáte stránku nebo upravíte rozvržení chatováním s Golemem — musíte znovu publikovat, aby se změny dostaly na živý web.
+Goleme změny nepublikuje automaticky. Pokaždé, když web upravíte, například změníte nadpis, přidáte stránku nebo upravíte rozvržení chatováním s Golemem, musíte znovu publikovat, aby se změny dostaly na živý web.
 
 <Steps>
   <Step title="Proveďte změny">
@@ -63,7 +63,7 @@ Goleme změny nepublikuje automaticky. Pokaždé, když web upravíte — ať zm
   </Step>
 </Steps>
 
-Návštěvníci webu uvidí nejnovější publikovanou verzi hned po dokončení nasazení, což obvykle trvá několik sekund.
+Návštěvníci webu uvidí nejnovější publikovanou verzi po dokončení nasazení. V rozhraní Goleme se může zobrazit upozornění, že publikování může trvat až 2 minuty.
 
 ## Co dál
 
